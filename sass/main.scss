@@ -1,0 +1,210 @@
+@import "resets.scss";
+@import "mixins.scss";
+@import "bourbon", "neat";
+@import "bourbon";
+@import "layout.scss";
+@import "theme.scss";
+
+/*!////////////////////////////////////////////////
+// MODULES
+/////////////////////////////////////////////////*/
+body{
+	background-color: $secondaryColor;
+}
+header[role=banner]{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	background-color: #fff;
+	padding: 10px 2.5%;
+	box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+nav[role=navigation]{
+	float: left;
+	margin-top: 7px;
+	margin-left: 40px;
+	li{
+		position: relative;
+		display: inline-block;
+		margin: 0 15px;
+		a{
+			font-family: $headline;
+			font-size: em(18);
+			font-weight: 700;
+			color: $secondaryColor;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		&:after{
+			content: '•';
+			position: absolute;
+			right: -22px;
+			top: -5px;
+			font-size: em(28);
+			color: $alternateColor;
+		}
+		&:last-of-type:after{
+			content: '';
+		}
+	}
+}
+.logo{
+	font-family: $headline;
+	font-size: em(28);
+	font-weight: 700;
+	color: $primaryColor;
+	text-decoration: none;
+	float: left;
+}
+.ctas{
+	float: right;
+	margin-top: 5px;
+}
+.button.button--cta{
+	background-color: $primaryColor;
+	padding: 5px 15px 7px;
+	font-family: $headline;
+	font-size: em(18);
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.hero{
+	height: em(590);
+	background-image: url(../images/harrisburg.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+.hero__text{
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	figure{
+		position: relative;
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 19px;
+			width: 40%;
+			height: 3px;
+			background-color: $secondaryColor;
+		}	
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 19px;
+			width: 40%;
+			height: 3px;
+			background-color: $secondaryColor;
+		}	
+	}
+	p{
+		font-family: $body;
+		font-size: em(28);
+		font-style: italic;
+		color: $secondaryColor;
+	}
+	h1{
+		font-family: $headline;
+		font-size: em(46);
+		font-weight: 700;
+		color: $primaryColor;
+		text-transform: uppercase;
+	}
+}
+.content{
+	background-color: #fff;
+	width: 90%;
+	max-width: em(1440);
+	margin: -65px auto 0;
+	padding: 5%;
+	border-radius: em(5);
+
+}
+.content--home{
+	h2{
+		font-family: $althead;
+		font-size: em(32);
+		font-weight: 700;
+		font-style: italic;
+		color: $secondaryColor;
+		text-align: center;
+		margin-bottom: em(10);
+	}
+	p{
+		font-family: $body;
+		font-size: em(24);
+		text-align: center;
+		line-height: 1.8em;
+		margin-bottom: em(40);
+	}
+}
+.hotlink{
+	display: block;
+	background-color: $alternateColor;
+	width: 100%;
+	font-family: $headline;
+	font-size: em(32);
+	font-weight: 700;
+	color: $secondaryColor;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-bottom: 10px;
+	padding: 20px;
+	border-radius: em(2);
+}
+.button__wrap{
+	width: 90%;
+	max-width: em(1440);
+	margin: 1.5% auto em(30);
+}
+.button--large{
+	display: block;
+	background-color: $primaryColor;
+	font-family: $headline;
+	font-size: em(32);
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 20px;
+	border-radius: em(2);
+	&:nth-of-type(1){
+		width: 49%;
+		float: left;
+		margin-right: 1%;
+	}
+	&:nth-of-type(2){
+		width: 49%;
+		float: right;
+		margin-left: 1%;
+	}
+}
+.copyright{
+	font-family: $headline;
+	font-size: em(18);
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: em(30);
+}
+/*!////////////////////////////////////////////////
+// STATES
+/////////////////////////////////////////////////*/
+
+
+
+@import "shame.scss";
+@import "helpers.scss";

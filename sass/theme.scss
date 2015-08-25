@@ -1,0 +1,16 @@
+/*!////////////////////////////////////////////////
+// THEME
+/////////////////////////////////////////////////*/
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$primaryColor: #e51b23; //red
+$secondaryColor: #1a2c43; //navy
+$alternateColor: #e8e8e8; //gray
+
+$headline: 'Bitter', serif;
+$althead: 'Playfair Display', serif;
+$body: georgia, serif;
