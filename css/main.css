@@ -419,6 +419,8 @@ nav[role=navigation] {
       color: #1a2c43;
       text-transform: uppercase;
       text-decoration: none; }
+      nav[role=navigation] li a:hover, nav[role=navigation] li a:focus {
+        color: #e51b23; }
     nav[role=navigation] li:after {
       content: '•';
       position: absolute;
@@ -428,6 +430,8 @@ nav[role=navigation] {
       color: #e8e8e8; }
     nav[role=navigation] li:last-of-type:after {
       content: ''; }
+    nav[role=navigation] li .selected {
+      border-bottom: 3px solid #91a7c3; }
 
 .logo {
   font-family: "Bitter", serif;
@@ -499,25 +503,84 @@ nav[role=navigation] {
 .content {
   background-color: #fff;
   width: 90%;
-  max-width: 90em;
-  margin: -65px auto 0;
+  max-width: 80em;
+  margin: 0 auto 0;
   padding: 5%;
   border-radius: 0.3125em; }
+  .content h1 {
+    font-family: "Bitter", serif;
+    font-size: 2.625em;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.625em;
+    background-color: #91a7c3;
+    padding: 60px;
+    border-bottom: 8px solid #e51b23; }
+    .content h1 span {
+      font-family: georgia, serif;
+      font-size: 0.6875em;
+      font-weight: 400;
+      font-style: italic;
+      text-transform: lowercase; }
+  .content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a2c43;
+    text-align: center;
+    margin-bottom: 0.625em; }
+  .content p, .content li {
+    font-family: georgia, serif;
+    font-size: 1.125em;
+    text-align: left;
+    line-height: 1.8em;
+    margin-bottom: 1.25em; }
+  .content li {
+    font-size: 1.375em;
+    font-weight: 700;
+    margin-left: 1.25em; }
+  .content .first-paragraph {
+    font-family: georgia, serif;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 1.8em;
+    margin-bottom: 2.5em; }
 
-.content--home h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2em;
-  font-weight: 700;
-  font-style: italic;
-  color: #1a2c43;
-  text-align: center;
-  margin-bottom: 0.625em; }
-.content--home p {
-  font-family: georgia, serif;
-  font-size: 1.5em;
-  text-align: center;
-  line-height: 1.8em;
-  margin-bottom: 2.5em; }
+.content--home {
+  margin: -65px auto 0; }
+  .content--home h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a2c43;
+    text-align: center;
+    margin-bottom: 0.625em; }
+  .content--home p {
+    font-family: georgia, serif;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.8em;
+    margin-bottom: 2.5em; }
+
+.content--about {
+  margin: 100px auto 0;
+  padding: 3.75em 5% 3.75em; }
+
+.content--bylaws {
+  margin: 100px auto 0;
+  padding: 3.75em 5% 3.75em; }
+  .content--bylaws p {
+    font-family: georgia, serif;
+    font-size: 1.125em;
+    text-align: left;
+    line-height: 1.8em;
+    margin-bottom: 1.25em; }
+    .content--bylaws p b {
+      display: block; }
 
 .hotlink {
   display: block;
@@ -536,7 +599,7 @@ nav[role=navigation] {
 
 .button__wrap {
   width: 90%;
-  max-width: 90em;
+  max-width: 80em;
   margin: 1.5% auto 1.875em; }
 
 .button--large {
@@ -568,6 +631,30 @@ nav[role=navigation] {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 1.875em; }
+
+.officers {
+  margin: 0 0 80px;
+  padding: 20px 0; }
+  .officers p {
+    margin-bottom: 0; }
+  .officers a {
+    color: #e51b23; }
+
+.content--about .officers__title {
+  font-size: 1.375em;
+  text-align: center;
+  margin-bottom: 1.25em; }
+.content--about .officer {
+  text-align: center;
+  float: none;
+  display: inline-block;
+  vertical-align: middle; }
+  .content--about .officer p {
+    text-align: center; }
+.content--about .officer__title {
+  font-family: "Bitter", serif;
+  font-size: 1.5em;
+  color: #e51b23; }
 
 /*!////////////////////////////////////////////////
 // STATES

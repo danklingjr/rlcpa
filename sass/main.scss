@@ -35,6 +35,10 @@ nav[role=navigation]{
 			color: $secondaryColor;
 			text-transform: uppercase;
 			text-decoration: none;
+			&:hover,
+			&:focus{
+				color: $primaryColor;
+			}
 		}
 		&:after{
 			content: '•';
@@ -46,6 +50,9 @@ nav[role=navigation]{
 		}
 		&:last-of-type:after{
 			content: '';
+		}
+		.selected{
+			border-bottom: 3px solid $blueGray;
 		}
 	}
 }
@@ -124,13 +131,60 @@ nav[role=navigation]{
 .content{
 	background-color: #fff;
 	width: 90%;
-	max-width: em(1440);
-	margin: -65px auto 0;
+	max-width: em(1280);
+	margin: 0 auto 0;
 	padding: 5%;
 	border-radius: em(5);
-
+	h1{
+		font-family: $headline;
+		font-size: em(42);
+		font-weight: 700;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: em(10);
+		background-color: $blueGray;
+		padding: 60px;
+		border-bottom: 8px solid $primaryColor;
+		span{
+			font-family: $body;
+			font-size: em(11);
+			font-weight: 400;
+			font-style: italic;
+			text-transform: lowercase;
+		}
+	}
+	h2{
+		font-family: $althead;
+		font-size: em(32);
+		font-weight: 700;
+		font-style: italic;
+		color: $secondaryColor;
+		text-align: center;
+		margin-bottom: em(10);
+	}
+	p,li{
+		font-family: $body;
+		font-size: em(18);
+		text-align: left;
+		line-height: 1.8em;
+		margin-bottom: em(20);
+	}
+	li{
+		font-size: em(22);
+		font-weight: 700;
+		margin-left: em(20);
+	}
+	.first-paragraph{
+		font-family: $body;
+		font-size: em(24);
+		text-align: left;
+		line-height: 1.8em;
+		margin-bottom: em(40);
+	}
 }
 .content--home{
+	margin: -65px auto 0;
 	h2{
 		font-family: $althead;
 		font-size: em(32);
@@ -146,6 +200,26 @@ nav[role=navigation]{
 		text-align: center;
 		line-height: 1.8em;
 		margin-bottom: em(40);
+	}
+}
+.content--about{
+	margin: 100px auto 0;
+	padding: em(60) 5% em(60);
+	
+	
+}
+.content--bylaws{
+	margin: 100px auto 0;
+	padding: em(60) 5% em(60);
+	p{
+		font-family: $body;
+		font-size: em(18);
+		text-align: left;
+		line-height: 1.8em;
+		margin-bottom: em(20);
+		b{
+			display: block;
+		}
 	}
 }
 .hotlink{
@@ -165,7 +239,7 @@ nav[role=navigation]{
 }
 .button__wrap{
 	width: 90%;
-	max-width: em(1440);
+	max-width: em(1280);
 	margin: 1.5% auto em(30);
 }
 .button--large{
@@ -200,6 +274,42 @@ nav[role=navigation]{
 	text-transform: uppercase;
 	margin-bottom: em(30);
 }
+
+//ABOUT US
+.officers{
+	margin: 0 0 80px;
+	// border-top: 3px solid #f0f0f0;
+	// border-bottom: 3px solid #f0f0f0;
+	padding: 20px 0;
+	p{
+		margin-bottom: 0;
+	}
+	a{
+		color: $primaryColor;
+	}
+}
+.content--about{
+	.officers__title{
+		font-size: em(22);
+		text-align: center;
+		margin-bottom: em(20);
+	}
+	.officer{
+		text-align: center;
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+		p{
+			text-align: center;
+		}
+	}
+	.officer__title{
+		font-family: $headline;
+		font-size: em(24);
+		color: $primaryColor;
+	}
+}
+
 /*!////////////////////////////////////////////////
 // STATES
 /////////////////////////////////////////////////*/
